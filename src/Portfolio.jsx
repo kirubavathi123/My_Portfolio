@@ -96,6 +96,18 @@ export default function Portfolio() {
           Coming soon! I’ll be sharing insights from AI, app development, and startup building.
         </p>
       </section>
+   <section className="mt-8 text-center">
+  <h3 className="text-lg font-semibold text-[#1a1a40] mb-2">📱 Scan & Follow</h3>
+  <p className="text-sm text-[#555]">Want to share or follow my work? Scan the QR code below:</p>
+  <img
+    src="https://api.qrserver.com/v1/create-qr-code/?data=https://kiruba.netlify.app&size=200x200"
+    alt="QR Code for Kiruba's Portfolio"
+    className="mx-auto mt-4 rounded shadow-md w-32"
+  />
+</section>
+
+    
+    
     </main>
   );
 }
