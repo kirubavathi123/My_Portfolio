@@ -1,6 +1,3 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function Portfolio() {
@@ -12,26 +9,24 @@ export default function Portfolio() {
         </motion.h1>
         <p className="text-lg">Data Scientist | AI Researcher | Startup Founder</p>
         <div className="flex justify-center space-x-4">
-          <a href="https://github.com/kirubavathi123" target="_blank"><Github /></a>
-          <a href="https://linkedin.com/in/yourprofile" target="_blank"><Linkedin /></a>
-          <a href="mailto:your.email@example.com"><Mail /></a>
+          <a href="https://github.com/kirubavathi123" target="_blank">GitHub</a>
+          <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+          <a href="mailto:your.email@example.com">Email</a>
         </div>
       </section>
 
       <section className="mt-10">
         <h2 className="text-2xl font-semibold mb-4">Projects</h2>
         <div className="grid gap-4">
-          <Card>
-            <CardContent className="p-4">
-              <h3 className="text-xl font-semibold">NHS SQL Reporting</h3>
-              <p className="text-sm text-muted-foreground">
-                SQL queries and SSRS dashboards used in NHS Clinical Engineering to track device protocols and maintenance data.
-              </p>
-              <a href="https://github.com/kirubavathi123/nhs-sql-reporting" target="_blank">
-                <Button className="mt-2">View on GitHub</Button>
-              </a>
-            </CardContent>
-          </Card>
+          <div className="border rounded-xl p-4 shadow-md">
+            <h3 className="text-xl font-semibold">NHS SQL Reporting</h3>
+            <p className="text-sm text-gray-600">
+              SQL queries and SSRS dashboards used in NHS Clinical Engineering to track device protocols and maintenance data.
+            </p>
+            <a href="https://github.com/kirubavathi123/nhs-sql-reporting" target="_blank" className="inline-block mt-2 text-blue-600 underline">
+              View on GitHub
+            </a>
+          </div>
         </div>
       </section>
 
@@ -49,3 +44,4 @@ export default function Portfolio() {
     </main>
   );
 }
+
