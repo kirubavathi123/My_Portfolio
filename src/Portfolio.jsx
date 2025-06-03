@@ -1,49 +1,63 @@
 
-// This would be the React component content with QR code and icons added
-// but before the react-icons/react-qr-code import issues broke the build.
-// Assume the base structure was working, and code uses fallback HTML/CSS for icons and QR without NPM packages.
-
 import React from "react";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
-const Portfolio = () => {
+export default function Portfolio() {
   return (
-    <div style={{
-      background: "linear-gradient(to right, #000000, #3b0a45, #ff6a00)",
-      minHeight: "100vh",
-      color: "#F8EBDD",
-      padding: "2rem",
-      fontFamily: "Arial, sans-serif"
-    }}>
-      <h1 style={{ color: "#8B0000" }}>Kirubavathi Baskaran</h1>
-      <h2 style={{ color: "#B22222" }}>CTO & Founder</h2>
-      <p>🌟 Vision Engineered. Intelligence Delivered.</p>
+    <div
+      style={{
+        minHeight: "100vh",
+        background: "linear-gradient(to bottom right, black, #3a0ca3, orange)",
+        color: "#F8EBDD",
+        fontFamily: "Arial, sans-serif",
+        padding: "2rem",
+      }}
+    >
+      <h1 style={{ color: "#800020", fontSize: "2.5rem", marginBottom: "1rem" }}>
+        Kirubavathi Baskaran
+      </h1>
+      <h2 style={{ color: "#800020", fontSize: "1.5rem", marginBottom: "2rem" }}>
+        CTO & Founder | Vision Engineered. Intelligence Delivered.
+      </h2>
 
-      <section>
-        <h3 style={{ color: "#B22222" }}>💼 About Me</h3>
-        <p>7+ years of experience in software, data, and AI. Currently building Pikkpro – a platform of intelligent service tools.</p>
-      </section>
+      <p style={{ maxWidth: "600px", lineHeight: "1.6", marginBottom: "2rem" }}>
+        I'm a visionary leader in tech with a proven track record of building powerful solutions
+        in AI, data, and software engineering. Currently leading the innovation at Pikkpro.
+      </p>
 
-      <section>
-        <h3 style={{ color: "#B22222" }}>🚀 Featured Project: Pikkpro</h3>
-        <p>Pikkpro is an all-in-one platform offering automation, reporting, and intelligent service flows for modern professionals.</p>
-      </section>
+      <h3 style={{ color: "#800020", marginBottom: "1rem" }}>Featured Project – Pikkpro</h3>
+      <p style={{ maxWidth: "600px", lineHeight: "1.6" }}>
+        Pikkpro is a dynamic service and gig platform redefining professionalism. As the CTO &
+        Founder, I architected the system and lead the tech roadmap across frontend, backend, and AI
+        integrations.
+      </p>
 
-      <section>
-        <h3 style={{ color: "#B22222" }}>🔗 Connect with Me</h3>
-        <ul>
-          <li><a href="https://github.com/kirubavathi123" target="_blank" rel="noreferrer" style={{ color: "#F8EBDD" }}>GitHub</a></li>
-          <li><a href="https://www.linkedin.com/in/kirubavathi-b-b212944b" target="_blank" rel="noreferrer" style={{ color: "#F8EBDD" }}>LinkedIn</a></li>
-          <li><a href="mailto:kirubavathibaskaran@gmail.com" style={{ color: "#F8EBDD" }}>Email</a></li>
-        </ul>
-      </section>
-
-      <section>
-        <h3 style={{ color: "#B22222" }}>📱 Share This Portfolio</h3>
-        <p>Scan this QR code to view this page on your phone:</p>
-        <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://kiruba.netlify.app/&size=150x150" alt="QR Code" />
-      </section>
+      <div style={{ marginTop: "2rem", display: "flex", gap: "1rem", fontSize: "1.5rem" }}>
+        <a
+          href="https://github.com/kirubavathi123"
+          style={{ color: "#F8EBDD" }}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaGithub />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/kirubavathi-b-b212944b"
+          style={{ color: "#F8EBDD" }}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaLinkedin />
+        </a>
+        <a
+          href="mailto:kirubavathibaskaran@gmail.com"
+          style={{ color: "#F8EBDD" }}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaEnvelope />
+        </a>
+      </div>
     </div>
   );
-};
-
-export default Portfolio;
+}
