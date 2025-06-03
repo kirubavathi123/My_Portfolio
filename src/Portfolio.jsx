@@ -1,62 +1,45 @@
-
+// Portfolio.jsx
 import React from "react";
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope, FaQrcode } from "react-icons/fa";
+import QRCode from "react-qr-code";
 
 export default function Portfolio() {
   return (
-    <div
-      style={{
-        minHeight: "100vh",
-        background: "linear-gradient(to bottom right, black, #3a0ca3, orange)",
-        color: "#F8EBDD",
-        fontFamily: "Arial, sans-serif",
-        padding: "2rem",
-      }}
-    >
-      <h1 style={{ color: "#800020", fontSize: "2.5rem", marginBottom: "1rem" }}>
-        Kirubavathi Baskaran
-      </h1>
-      <h2 style={{ color: "#800020", fontSize: "1.5rem", marginBottom: "2rem" }}>
-        CTO & Founder | Vision Engineered. Intelligence Delivered.
-      </h2>
+    <div className="min-h-screen px-6 py-12" style={{
+      background: "linear-gradient(135deg, black, #36013F, #F27121)",
+      color: "#F8EBD7"
+    }}>
+      <h1 className="text-5xl font-bold mb-4" style={{ color: "#8B0000" }}>Kirubavathi Baskaran</h1>
+      <h2 className="text-2xl font-semibold mb-6" style={{ color: "#B76E79" }}>CTO & Founder</h2>
+      <p className="text-lg italic mb-10">Vision Engineered. Intelligence Delivered.</p>
 
-      <p style={{ maxWidth: "600px", lineHeight: "1.6", marginBottom: "2rem" }}>
-        I'm a visionary leader in tech with a proven track record of building powerful solutions
-        in AI, data, and software engineering. Currently leading the innovation at Pikkpro.
-      </p>
+      <div className="flex space-x-6 text-3xl mb-10">
+        <a href="https://github.com/kirubavathi123" target="_blank" rel="noopener noreferrer" title="GitHub">
+          <FaGithub className="hover:text-white" />
+        </a>
+        <a href="https://www.linkedin.com/in/kirubavathi-b-b212944b" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+          <FaLinkedin className="hover:text-white" />
+        </a>
+        <a href="mailto:kirubavathibaskaran@gmail.com" title="Email">
+          <FaEnvelope className="hover:text-white" />
+        </a>
+        <div title="Scan to view blog">
+          <FaQrcode className="hover:text-white" />
+        </div>
+      </div>
 
-      <h3 style={{ color: "#800020", marginBottom: "1rem" }}>Featured Project – Pikkpro</h3>
-      <p style={{ maxWidth: "600px", lineHeight: "1.6" }}>
-        Pikkpro is a dynamic service and gig platform redefining professionalism. As the CTO &
-        Founder, I architected the system and lead the tech roadmap across frontend, backend, and AI
-        integrations.
-      </p>
+      <div className="mb-10">
+        <h3 className="text-3xl font-bold mb-3" style={{ color: "#8B0000" }}>Main Project: Pikkpro</h3>
+        <p className="text-base leading-relaxed">
+          Pikkpro is a smart tech platform founded to simplify digital bookings and service engagement.
+          We are currently developing MVPs including gaming and math education apps to demonstrate
+          our product ecosystem.
+        </p>
+      </div>
 
-      <div style={{ marginTop: "2rem", display: "flex", gap: "1rem", fontSize: "1.5rem" }}>
-        <a
-          href="https://github.com/kirubavathi123"
-          style={{ color: "#F8EBDD" }}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaGithub />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/kirubavathi-b-b212944b"
-          style={{ color: "#F8EBDD" }}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaLinkedin />
-        </a>
-        <a
-          href="mailto:kirubavathibaskaran@gmail.com"
-          style={{ color: "#F8EBDD" }}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaEnvelope />
-        </a>
+      <div className="mt-12">
+        <h4 className="text-xl font-semibold mb-2" style={{ color: "#B76E79" }}>QR Code (For sharing):</h4>
+        <QRCode value="https://kiruba.netlify.app" bgColor="#F8EBD7" fgColor="#36013F" size={128} />
       </div>
     </div>
   );
