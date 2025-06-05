@@ -10,7 +10,7 @@ export default function Portfolio() {
       {/* Hero Section */}
       <section className="text-center space-y-4 mb-10">
         <motion.h1
-          className="text-5xl font-extrabold text-[#ffb703]"
+          className="text-5xl font-extrabold text-[#2a003f]"
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
         >
